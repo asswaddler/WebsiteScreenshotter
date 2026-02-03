@@ -1,0 +1,28 @@
+{
+  "manifest_version": 3,
+  "name": "Full Page PNG Capture",
+  "version": "1.0.0",
+  "description": "Capture a full webpage into a single PNG via scrolling and stitching.",
+  "permissions": [
+    "activeTab",
+    "scripting",
+    "tabs",
+    "downloads",
+    "storage"
+  ],
+  "host_permissions": ["<all_urls>"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_title": "Capture full page",
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}

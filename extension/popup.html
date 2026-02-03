@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Full Page Capture</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <main>
+      <h1>Full Page PNG</h1>
+      <label class="option">
+        <input type="checkbox" id="hideFixed" checked />
+        Hide fixed/sticky elements
+      </label>
+      <label class="option">
+        <input type="checkbox" id="warmupLazy" checked />
+        Warm-up lazy-loaded content
+      </label>
+      <label class="option">
+        <input type="checkbox" id="autoExpand" checked />
+        Auto-scroll to load extra content
+      </label>
+      <button id="capture">Capture full page</button>
+      <p id="status" role="status" aria-live="polite"></p>
+    </main>
+    <script src="popup.js"></script>
+  </body>
+</html>
